@@ -13,3 +13,13 @@ Rubyのレッスン用コード
 - オブジェクト指向って何かを知る
     - 継承とメソッドオーバライド(多態性)
     - カプセル化
+
+## Docker による起動まで
+### imageの作成(初回、Dockerfileを変えたときだけ)
+```
+docker build ./ -t ruby_nvm
+```
+### 起動
+```
+docker run -v `pwd`:/app -it ruby_nvm /bin/bash
+```
